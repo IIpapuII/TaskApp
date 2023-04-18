@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% import 'macros.html' as macros %}
+{% block title %}
+{{ super() }}
+Bienvenidad
+{% endblock %}
+
+{% block content %}
+{% if user_ip %}
+    {{macros.render_todo(user_ip)}}
+{% else %}
+    <a href="{{ url_for('prue.index') }}"> ir a inicio</a>
+{% endif %}
+<ul>
+    {% for todo in todos %}
+    <li>{{todo}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
