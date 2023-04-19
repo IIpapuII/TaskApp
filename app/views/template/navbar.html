@@ -1,0 +1,18 @@
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid justify-content-start">
+        <a class="navbar-brand" href="{{url_for('prue.index')}}">
+          <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="30" height="30" class="d-inline-block align-text-top">
+          TaskList
+        </a>
+        <ul class="nav nav-pills ">
+            <li class=" nav-link ">
+            <a class="nav-link active" href=" {{url_for('prue.index')}}"> Listas</a>
+            </li>
+        </ul>
+      </div>
+  <!--   <div class="navbar-brand">
+        {{ render_nav_item('prue.index', 'Home') }}
+    </div> -->
+</nav>

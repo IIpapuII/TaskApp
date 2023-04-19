@@ -7,7 +7,7 @@ Bienvenidad
 
 {% block content %}
 {% if user_ip %}
-    {{macros.render_todo(user_ip)}}
+    <h1>Hello Wordl Wilmer, tu IP es {{ user_ip }}</h1>
 {% else %}
     <a href="{{ url_for('prue.index') }}"> ir a inicio</a>
 {% endif %}
